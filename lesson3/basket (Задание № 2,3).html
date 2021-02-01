@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    var basket = [
+        {
+            title: "apple",
+            price: 80,
+            count: 1
+        },
+        {
+            title: "tomat",
+            price: 150,
+            count: 2
+        },
+        {
+            title: "cake",
+            price: 230,
+            count: 1
+        }
+    ]
+
+    function countBasketprice(mas) {
+        var sumBasket = 0;
+        for (var item of mas) {
+            sumBasket += (item.price * item.count)
+        }
+        return sumBasket;
+    }
+    console.log(countBasketprice(basket));
+
+</script>
