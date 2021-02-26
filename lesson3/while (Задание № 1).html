@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    var x = 2;
+    function primeNumbers(num) {
+        var i = 2;
+        while (i < num) {
+            if (num % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true
+    }
+
+    while (x <= 100) {
+        if (primeNumbers(x)) {
+            console.log(x)
+        }
+        x++;
+    }
+
+
+
+
+</script>

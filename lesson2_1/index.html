@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Задание №1 -->
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 (сначала выполняется присваивание переменной "а", затем её значение присваивается переменной "с";)
+        d = b++; alert(d);           // 1 (сначала переменной "d" присваивается значение "b", а уже потом "b" увеличивается на еденицу;) 
+        c = (2+ ++a); alert(c);      // 5 (в 1 примере переменная "a" стала равнятся 2, затем в текущем примере переменная "a" увеличилась на единицу и она стала равняться 3. 3+2 = 5;)
+        d = (2+ b++); alert(d);      // 4 (во 2 примере "b" стала равняться 2. Так как используется постфиксная форма инкремента, то сначала происходит присваивание перменной "d", а затем уже "b" увеличится на 1. 2 + 2 = 4;)
+        alert(a);                    // 3 (из 3 примера видно, что переменная "а" стала равняться 3;)
+        alert(b);                    // 3 (во 2-ом примере "b" увелиичилась на 1 и в 4-ом примере "b" увелиичилась на 1, соответсвенно "b"=3.)
+    </script>
+
+
+    <!-- Задание №2 -->
+    <script>
+        var a = 2;
+        var x = 1 + (a *= 2);
+        alert(x);                    // "a" равно 5; 
+    </script>
+    
+    <!--Задание № 3-->
+    <script>
+        var a=+prompt("Введите первое положительное целочисленное зачение");
+        var b=+prompt("Введите второе положительное целочисленное зачение");
+        var c;
+        if (a>=0 && b>=0) {
+            c = a-b
+        };
+        alert (c);
+    </script>
+    <script>
+        var a=+prompt("Введите первое отрицательное целочисленное зачение");
+        var b=+prompt("Введите второе отрицательное целочисленное зачение");
+        var c;
+        if (a<0 && b<0) {
+            c = a*b
+        };
+        alert (c);
+    </script>
+    <script>
+        var a=+prompt("Введите первое отрицательное целочисленное зачение");
+        var b=+prompt("Введите второе положительное целочисленное зачение");
+        var c;
+        if (a<0 && b>=0) {
+            c = a+b
+        };
+        alert (c);
+    </script>
+    <!-- Задание № 4 -->
+    <script> 
+        var a = +prompt("Введите число от 0 до 15");
+            function start(a) {
+                switch (a) {
+                    case a:
+                        console.log(a);
+                            break;
+                   }
+                   a++;
+                   if (a <= 15) start(a);
+               }
+           start(a);
+    </script>
+    <!-- Задание № 5 -->
+    <script> 
+        var a = +prompt("Введите первое число");
+        var b = +prompt("Введите второе число");
+        sum(a, b);
+        subtraction(a, b);
+        multiply(a, b);
+        division(a, b);
+       
+               function sum(a, b) {
+                   return console.log(a + b);
+               }
+       
+               function subtraction(a, b) {
+                   return console.log(a - b);
+               }
+       
+               function multiply(a, b) {
+                   return console.log(a * b);
+               }
+       
+               function division(a, b) {
+                   return console.log(a / b);
+               }
+       </script>
+      <!-- Задание № 6 -->
+      <script>
+        function sum (a, b) {
+            return a + b;
+        }
+ 
+        function subtraction(a, b) {
+            return a - b;
+        }
+ 
+        function multiply(a, b) {
+            return a * b;
+        }
+ 
+        function division(a, b) {
+            return a / b;
+        }
+     
+     function mathOperation(arg1, arg2, operation) {
+         switch (operation) {
+             case "sum":
+                 return sum(arg1, arg2);
+                 break;
+             case "subtraction":
+                 return subtraction(arg1, arg2);
+              break;
+             case "multiply":
+                 return multiply(arg1, arg2);
+                 break;
+             case "division":
+                 return division(arg1, arg2);
+                 break;
+             default:
+             return NaN;
+             break
+         }
+     }
+     var a = +prompt("Введите первое число");
+     var b = +prompt("Введите второе число");
+     var oper = prompt("Введите операцию: sum, subtraction, multiply, division");
+     alert ("Результат: " + mathOperation(a, b, oper));     
+      </script>
+      <!-- Задание № 7 -->
+      
+      var varNull = null, varZero = 0;
+      if (varNull>varZero) {
+          document.write ("null > zero <br>");
+      }
+      if (varNull<varZero) {
+          document.write ("null < zero <br>");
+      }
+      if (varNull == varZero) {
+          document.write ("null = zero <br>");
+      }
+      if (varNull!=varZero) {
+          document.write ("null != zero <br>");
+      }
+    <!-- Задание № 8 -->
+    <script>
+    function power (val, pow){
+    if (pow==1) {
+        return val;        
+    }
+    if (pow==0 ) {
+        return 1
+    };
+    if (pow>0) {
+        var temp= val * power(val,pow-1);
+    
+    console.log (temp);
+    return temp;
+    }
+    return (1/val)*(power(val,pow+1));
+}
+power (2,3);
+
+            
+    
+    
+</script>
+
+</body>
+
+</html>
